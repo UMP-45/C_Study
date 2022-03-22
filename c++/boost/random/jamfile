@@ -1,0 +1,20 @@
+#
+
+exe run : randon.cpp :
+  <address-model>32_64
+  <architecture>combined
+ #<build>no/yes
+  <cxxstd>17
+  <debug-symbols>off <profiling>off
+  <include>.
+  <link>static
+  <location>.
+  <optimization>speed <inlining>on <vectorize>on
+  <runtime-link>static <runtime-debugging>off
+ #<stdlib>
+  <threading>multi
+ #<variant>release
+  <version>1.0
+  <variant>debug
+  <warnings>all <warnings-as-errors>off
+;

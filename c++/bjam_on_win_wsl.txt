@@ -1,0 +1,31 @@
+﻿: windows
+
+curl https://dl.bintray.com/boostorg/release/
+
+aria2c https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.7z
+
+7z x boost_1_71_0.7z
+
+cd boost_1_71_0\tools\build
+
+bootstrap.bat gcc
+
+b2 --toolset=gcc --prefix="D:\SOFTWARE\devel\MinGW" install
+
+copy src\engine\bjam.exe D:\SOFTWARE\devel\MinGW\bin
+
+file: open_distro_window.bat or set_distro_paths.bat
+set BOOST_ROOT=D:\SOFTWARE\devel\MinGW\share\boost-build
+set BOOST_BUILD_PATH=D:\SOFTWARE\devel\MinGW\share\boost-build
+
+-------------------------------------------------------------------------------
+#
+curl https://dl.bintray.com/boostorg/release/
+aria2c https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.7z
+7z x boost_1_71_0.7z
+cd /mnt/d/SOFTWARE/devel/library/build
+./bootstrap.sh --with-toolset=clang
+./b2 toolset=clang install --prefix=/usr/local
+ln -s /usr/local/bin/b2 /usr/local/bin/bjam
+
+

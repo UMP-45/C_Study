@@ -1,0 +1,15 @@
+#
+exe run : trace_bug.cpp :
+  <address-model>32_64
+  <cxxflags>-std=c++17
+  <include>.
+  <link>static
+  <location>.
+  <optimization>speed
+  <runtime-link>static
+  <threading>multi
+  <variant>release
+ #<variant>debug
+  <warnings>all 
+ ;
+
